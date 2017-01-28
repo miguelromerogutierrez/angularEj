@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="angularej">
+	<head>
+		<title>Hola :)</title>
+		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.css">
+	</head>
+	<body ng-controller="appController">
+
+		<h1>Colección de discos</h1>
+
+		<div class="container">
+
+			<table class="table">
+				<tr>
+					<td>id</td>
+					<td>Nombre del albúm</td>
+					<td>Nombre del artista</td>
+					<td>Fecha de lanzamiento</td>
+					<td>Editar</td>
+					<td>Eliminar</td>
+				</tr>
+				<tr ng-repeat="album in albums">
+					<td>{{album.id}}</td>
+					<td>{{album.name}}</td>
+					<td>{{album.artist}}</td>
+					<td>{{album.released | date:'yyyy-MM-dd'}}</td>
+					<td><button class="btn btn-primary" ng-click="edit(album)"><span class="glyphicon glyphicon-pencil"></span></button></td>
+					<td><button class="btn btn-danger" ng-click="delete(album)"><span class="glyphicon glyphicon-remove"></span></button></td>
+				</tr>
+			</table>
+
+			<add-album albums="albums"></add-album>
+			<div add-album="" albums="albums"></div>
+
+		<script src="/libs/jquery/dist/jquery.min.js"></script>
+		<script src="/libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/js/app.js"></script>
+		<script type="text/javascript" src="/static/js/controllers/appController.controller.js"></script>
+		<script type="text/javascript" src="/static/js/services/albumsService.service.js"></script>
+		<script type="text/javascript" src="/static/js/directives/addAlbum.directive.js"></script>
+	</body>
+</html>

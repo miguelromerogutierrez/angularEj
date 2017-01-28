@@ -1,0 +1,34 @@
+{
+	"albums":[
+		{
+			"id":1,
+			"name": "Kill'em All",
+			"artist": "Metallica",
+			"released": 427960800000
+		},
+		{
+			"id":2,
+			"name":"Highway to Hell",
+			"artist":"AC/DC",
+			"released":301903200000
+		},
+		{
+			"id":3,
+			"name":"Back to Black",
+			"artist":"Amy Winehouse",
+			"released":1159592400000
+		},
+		{
+			"id":4,
+			"name":"AM",
+			"artist":"Arctic Monkeys",
+			"released": 1376024400000
+		},
+		{
+			"id":5,
+			"name":"Enema of State",
+			"artist":"Blink 182",
+			"released": 930805200000
+		}
+	] 
+}
